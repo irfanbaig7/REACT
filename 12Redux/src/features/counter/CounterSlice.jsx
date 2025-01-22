@@ -12,7 +12,7 @@ export const CounterSlice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
-    incrementByAmount: (state, action) => {
+    incrementByAmount: (state, action) => {  
       state.value += Number(action.payload);
     },
     reset: (state) => {
@@ -21,7 +21,7 @@ export const CounterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount, reset } =
-  CounterSlice.actions;
+// eslint-disable-next-line react-refresh/only-export-components
+export const { increment, decrement, incrementByAmount, reset } = CounterSlice.actions;
 
 export default CounterSlice.reducer;
