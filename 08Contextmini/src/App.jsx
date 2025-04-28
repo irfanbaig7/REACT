@@ -1,17 +1,16 @@
+import React from 'react'
+import UserContxtProvider from './context/UserContxtProvider'
+import Login from './components/Login'
+import Profile from './components/Profile'
 
-import './App.css'
-import Login from './component/Login'
-import Profile from './component/Profile'
-import UserContextProvider from './context/UserContxtProvider'
-function App() {
-
+export default function App() {
   return (
-    <UserContextProvider>
-      <h1>Helllooo Oyeeee</h1>
-      <Login />
+    
+    <UserContxtProvider>
+      <h1>kay chalu he</h1>
+      <Login /> 
       <Profile />
-    </UserContextProvider>
+    </UserContxtProvider>
   )
 }
 
-export default App
