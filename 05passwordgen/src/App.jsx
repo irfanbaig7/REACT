@@ -57,8 +57,7 @@ const App = () => {
           />
           <button
             className="bg-blue-600 text-white rounded-l-lg ml-3 py-2 px-2"
-            onClick={copyPasswordToClipboard}
-          >
+            onClick={copyPasswordToClipboard}>
             Copy
           </button>
         </div>
