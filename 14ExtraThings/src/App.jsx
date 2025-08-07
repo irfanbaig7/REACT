@@ -126,6 +126,8 @@ import UseEffeWithCounter from './components/UseEffeWithCounter'
 import Timer from './components/Timer'
 import useWindowWidth from './custom/useWindowWidth.js' // this is our custom hook to determine window Width
 import useToggle from './custom/useToggle.js'
+import Useref from './components/Useref.jsx'
+import TimerRef from './components/TimerRef.jsx'
 
 export default function App() {
 
@@ -146,7 +148,7 @@ export default function App() {
 
   // Here we inject our useWindowWidth custom hook
   // const width = useWindowWidth() 
-  const [isVisible,toggleVisible] = useToggle()
+  // const [isVisible,toggleVisible] = useToggle()
   
 
   return (
@@ -175,8 +177,22 @@ export default function App() {
 
 
       {/* custom toggle hook */}
-      <button onClick={toggleVisible}>Toggle</button>
-      {isVisible && <p>this Text will show/hide</p>}
+      {/* <button onClick={toggleVisible}>Toggle</button>
+      {isVisible && <p>this Text will show/hide</p>} */}
+
+
+      {/* useRef */}
+
+      {/* <Useref /> */}
+      {/* <TimerRef /> */}
+
+
+      {/* useMemo */}
+
+
+
+      {/* useCallback */}
+
 
 
 
