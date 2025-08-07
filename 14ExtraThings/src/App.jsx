@@ -128,6 +128,8 @@ import useWindowWidth from './custom/useWindowWidth.js' // this is our custom ho
 import useToggle from './custom/useToggle.js'
 import Useref from './components/Useref.jsx'
 import TimerRef from './components/TimerRef.jsx'
+import UseMemo from './components/UseMemo.jsx'
+import UseMemo2 from './components/UseMemo2.jsx'
 
 export default function App() {
 
@@ -188,6 +190,8 @@ export default function App() {
 
 
       {/* useMemo */}
+      {/* <UseMemo /> */}
+      {/* <UseMemo2 /> */}
 
 
 
