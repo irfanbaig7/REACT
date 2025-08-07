@@ -114,7 +114,7 @@
 
 // --------------------------------------------------------------------------------------------------
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ToggleText from './components/ToggleText'
 import LoginForm from './components/LoginFrom'
 import FriutList from './components/FriutList'
@@ -124,11 +124,30 @@ import Ccompo from './components/Ccompo'
 import Acomp from './bcomponentss/Acomp'
 import UseEffeWithCounter from './components/UseEffeWithCounter'
 import Timer from './components/Timer'
+import useWindowWidth from './custom/useWindowWidth.js' // this is our custom hook to determine window Width
+import useToggle from './custom/useToggle.js'
 
 export default function App() {
 
   // const [count, setCount] = useState(0)
-  const [showTimer, setShowTimer] = useState(true)
+  // const [showTimer, setShowTimer] = useState(true)
+
+  // without custom hook we handle Manually
+  // const [width, setWidth] = useState(window.innerWidth)
+  // useEffect(() => {
+  //   const handleResize = () => setWidth(window.innerWidth)
+  //   window.addEventListener("resize", handleResize)
+     
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize)
+  //   }
+  // }, [])
+
+
+  // Here we inject our useWindowWidth custom hook
+  // const width = useWindowWidth() 
+  const [isVisible,toggleVisible] = useToggle()
+  
 
   return (
     <div>
@@ -146,13 +165,18 @@ export default function App() {
 
       {/* 3 Lifecycle Phases Covered by useEffect : mounting, updating, unMounting */}
       {/* <UseEffeWithCounter /> */}
-      <button onClick={() => setShowTimer(!showTimer)}>
+      {/* <button onClick={() => setShowTimer(!showTimer)}>
         {showTimer ? "Hide Timer" : "Show Timer"}
-      </button>
+      </button> */}
+      {/* {showTimer && <Timer />} */}
 
-      {showTimer && <Timer />}
+      {/* For custum hook */}
+      {/* <p>width : {width}px</p> */}
 
 
+      {/* custom toggle hook */}
+      <button onClick={toggleVisible}>Toggle</button>
+      {isVisible && <p>this Text will show/hide</p>}
 
 
 
@@ -161,6 +185,10 @@ export default function App() {
 }
 
 
+
+
+// notesss 
+// Side effects = Wo kaam jo React ke "Render" cycle ke bahar hote hain, aur browser, system, ya external world ko directly impact karte hain.
 
 
 
