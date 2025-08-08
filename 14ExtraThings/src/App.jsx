@@ -130,6 +130,8 @@ import Useref from './components/Useref.jsx'
 import TimerRef from './components/TimerRef.jsx'
 import UseMemo from './components/UseMemo.jsx'
 import UseMemo2 from './components/UseMemo2.jsx'
+import UseCallback from './components/UseCallback.jsx'
+import ExpensiveCalculation from './components/ExpensiveCalculation.jsx'
 
 export default function App() {
 
@@ -196,6 +198,8 @@ export default function App() {
 
 
       {/* useCallback */}
+      {/* <UseCallback /> */}
+      <ExpensiveCalculation />
 
 
 

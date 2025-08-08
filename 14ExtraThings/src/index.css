@@ -10,7 +10,7 @@ body {
 
 button {
     cursor: pointer;
-    border: 1px solid black;
-    padding: 5px;
-
+    border: 1px solid rgb(223, 187, 187);
+    padding: 4px;
+    border-radius: 10px;
 }
