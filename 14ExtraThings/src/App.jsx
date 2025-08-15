@@ -199,8 +199,9 @@ export default function App() {
 
       {/* useCallback */}
       {/* <UseCallback /> */}
-      <ExpensiveCalculation />
+      {/* <ExpensiveCalculation /> */}
 
+      <h1>DOM manupaltion</h1>
 
 
 
